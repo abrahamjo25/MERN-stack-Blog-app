@@ -2,6 +2,8 @@ import express, { json } from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 
+import userRoute from "./routes/user.route.js"
+
 dotenv.config();
 const app = express();
 
@@ -13,18 +15,17 @@ mongoose
 const port = 3000;
 
 app.use(json());
-app.get("/", (req, res) => {
-  res.status(200);
-  res.send("Welcome to Express.JS");
-});
 
 app.listen(port, (error) => {
   if (!error) {
     console.log(
-      "Server is Successfully Running and App is listening on port " +
-        port
+      "Server is Successfully Running and App is listening on port " + port
     );
   } else {
     console.log("Error occured, server can't start", error);
   }
 });
+
+
+app.use("/api/user", userRoute);
+
