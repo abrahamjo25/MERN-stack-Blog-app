@@ -1,3 +1,5 @@
-export const test = (req, res) => {
-  res.json({ message: "API is working" });
-};
+import User from "../models/user.model.js";
+
+// export const getAllUsers = async(req, res) => {
+//   const users = User.
+// };
