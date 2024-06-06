@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 app.listen(port, (error) => {
   if (!error) {
     console.log(
-      "Server is Successfully Running and App is listening on poooooort " +
+      "Server is Successfully Running and App is listening on port " +
         port
     );
   } else {
