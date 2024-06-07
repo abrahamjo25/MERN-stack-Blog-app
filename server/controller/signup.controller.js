@@ -57,3 +57,8 @@ export const signin = async (req, res, next) => {
     next(errorHandler(400, "Fill all required fields"));
   }
 };
+
+
+export const google = (req, res) => {
+
+};
